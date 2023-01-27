@@ -41,7 +41,7 @@ main{
     background-color: #fff;
     text-align: center;
     padding: 2rem;
-    width: 22.5rem;
+    width: 23rem;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 30%)
 }
 .container .content{
@@ -74,11 +74,11 @@ button{
     border: none;
     cursor: pointer;
 }
-.container .input button{
+.container .signin_input button{
     background-color: #188fff;
     color: #fff;   
 }
-.container .input button:hover{
+.container .signin_input button:hover{
     background-color: #0473db;
 }
 .container .forget{
@@ -117,17 +117,37 @@ button{
 /* signup:-- css */
 
 .container .signup_input{
-    display: flex;
-    flex-direction: column;
+    margin: 1rem 0;
 }
 
 .container .signup_input input{
+    width: 90%;
     border: none;
     outline: none;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     padding: 0.5rem 0;
     border-bottom: 0.1px solid gray;
 }
+
+
 .container .signup_input input::placeholder{
-    font-size: 1rem;
+    color: #000;
+}
+.signup_container p{
+ font-size: 0.8rem;
+}
+a{
+    text-decoration: none;
+    color: #188fff;
+}
+
+.continue button{
+    background-color: #188fff;
+    width: 100%;
+    margin: 1.5rem 0;
+    color: #fff;
+}
+
+.continue button:hover{
+    background-color: #0473db;
 }

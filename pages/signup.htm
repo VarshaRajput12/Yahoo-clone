@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sign up</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="/styles/signin_signup.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/styles/signin_signup.css" />
+  </head>
+  <body>
     <header>
-        <nav class="left_nav">
-            <img src="/images/logo.png" alt="Yahoo logo" width="50%">
-        </nav>
-        <nav class="right_nav"><p>Help</p></nav>
+      <nav class="left_nav">
+        <img src="/images/logo.png" alt="Yahoo logo" width="50%" />
+      </nav>
+      <nav class="right_nav"><p>Help</p></nav>
     </header>
     <main>
-        <div class="container">
-            <div class="main_head">
-                <img src="/images/logo.png" alt="Yahoo" width="38%">
-            </div>
-            <div class="content">
-            <h3>Create a Yahoo account</h3>
-            </div>
-            <div class="signup_input">
-                <i class="fa-regular fa-address-card"></i>
-                <input type="text" name="" id="" placeholder="Full name">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="email" name="" id="" placeholder="New Yahoo email">
-                <input type="password" name="" id="" placeholder="Create password">
-                <input type="date" name="" id="" placeholder="Birth year">
-                <button type="button">Next</button>
-
-
-                
-            </div>
-            <div class="forget">
-                
-                <p class="checkbox"><input type="checkbox" class="check">Stay signed in</p>
-                <p class="forgetPassword">Forgot Username?</p>
-            </div>
-            <div class="create">
-                <button type="button">Create an account</button>
-            </div>
+      <div class="container signup_container">
+        <div class="main_head">
+          <img src="/images/logo.png" alt="Yahoo" width="38%" />
         </div>
+        <div class="content">
+          <h3>Create a Yahoo account</h3>
+        </div>
+        <div class="signup_input">
+          <div class="fullname input">
+            <i class="fa-regular fa-address-card"></i>
+            <input type="text" placeholder="Full name" />
+          </div>
+          <div class="email input">
+            <i class="fa-regular fa-envelope"></i>
+            <!-- <span>@yahoo.com</span> -->
+            <input type="email" placeholder="New Yahoo email" />
+          </div>
+          <div class="password input">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Create password" />
+          </div>
+          <div class="birth input">
+            <i class="fa-solid fa-cake-candles"></i>
+            <input type="date"/>
+          </div>
+        </div>
+
+        <p>
+          By clicking "Continue", you agree to the <a href="">Terms</a> and
+          acknowledge the <a href="">Privacy Policy</a>
+        </p>
+
+        <div class="continue">
+          <button type="button">Continue</button>
+          <p>
+            Already have an account? <a href="/pages/signin.html">Sign in</a>
+          </p>
+        </div>
+      </div>
     </main>
-    
-</body>
+  </body>
 </html>
