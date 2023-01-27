@@ -20,9 +20,19 @@ less.addEventListener("click", ()=>{
 
 hide.addEventListener("click", (e) => {
  options.classList.toggle("display");
+ if(hide.innerHTML = "Hide"){
+    hide.innerHTML = "Show";
+ }else{
+    hide.innerHTML = "Hide";
+ }
   
 });
 
 Folder_hide.addEventListener("click", (e) => {
   folder_options.classList.toggle("display");
+  if ((Folder_hide.innerHTML = "Hide")) {
+    Folder_hide.innerHTML = "Show";
+  } else {
+    Folder_hide.innerHTML = "Hide";
+  }
 });
