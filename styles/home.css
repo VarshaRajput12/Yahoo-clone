@@ -1,0 +1,71 @@
+@import "/styles/reset.css";
+
+main{
+    color: #fff;
+}
+button{
+    cursor: pointer;
+}
+header {
+  background-color: #7282fb;
+  padding: 1rem 2rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.container .left_nav .search{
+ border: 1px solid;
+ 
+ text-align: center;
+ 
+}
+.container .left_nav .search input{
+padding: 0.5rem 1rem;
+position: relative;
+}
+.fa-angle-down{
+    position: absolute;
+    left:12%;
+}
+.fa-magnifying-glass{
+    position: absolute;
+}
+
+/*========================== main============================= */
+
+.left_side{
+    background-color: #505baf;
+    width: 14rem;
+    height: 85vh;
+    padding: 1.5rem;
+    line-height: 2rem;
+}
+.left_side .compose{
+    width: 100%;
+    background-color: #188fff;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 0.5rem 0;
+    font-weight: bolder;
+    border-radius: 0.2rem;
+}
+.left_side p{
+    cursor: pointer;
+}
+
+.items2{
+    display: none;
+}
+.views{
+    display: flex;
+    justify-content: space-between;
+}
+
+.display{
+    display: none;
+}
+

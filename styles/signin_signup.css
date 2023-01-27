@@ -1,12 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Yahoo Sans','Helvetica Neue',Helvetica,Arial
-}
-
+@import '/styles/reset.css';
 body{
     background-color: #fff;
+}
+
+:root{
+    --main-color:#188fff;
 }
 
 header{
@@ -61,7 +59,7 @@ main{
     outline: none;
     margin: 1.5rem 0;
     padding: 0.5rem 0;
-    border-bottom: 0.1px solid #188fff;
+    border-bottom: 0.1px solid var(--main-color);
 }
 .container .signin_input input::placeholder{
     font-size: 1rem;
@@ -75,7 +73,7 @@ button{
     cursor: pointer;
 }
 .container .signin_input button{
-    background-color: #188fff;
+    background-color: var(--main-color);
     color: #fff;   
 }
 .container .signin_input button:hover{
@@ -96,6 +94,7 @@ button{
 }
 .check{
     margin: 0 0.5rem;
+    cursor: pointer;
 }
 .forgetPassword:hover{
     cursor: pointer;
@@ -103,9 +102,9 @@ button{
 }
 
 .container .create button{
-    border: 1px solid #188fff;
+    border: 1px solid var(--main-color);
     background-color: transparent;
-    color: #188fff;
+    color: var(--main-color);
     width: 100%;
     margin-bottom: 1.5em;
 }
@@ -134,15 +133,17 @@ button{
     color: #000;
 }
 .signup_container p{
+    color: gray;
  font-size: 0.8rem;
 }
 a{
     text-decoration: none;
-    color: #188fff;
+    color: var(--main-color);
 }
 
+
 .continue button{
-    background-color: #188fff;
+    background-color: var(--main-color);
     width: 100%;
     margin: 1.5rem 0;
     color: #fff;

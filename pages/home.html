@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yahoo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="/images/tabLogo.png" />
+    <link rel="stylesheet" href="/styles/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="left_nav">
+          <img src="/images/yahoo.png" alt="" />
+          <div class="search">
+            <input type="text" />
+            <i class="fa-solid fa-angle-down"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="right_nav">
+          <img src="/images/user.png" alt="user" width="3%" />
+          <img src="/images/home.png" alt="user" width="3%" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="maincontainer">
+        <aside>
+          <div class="left_side">
+            <button type="button" class="compose">Compose</button>
+            <div class="items">
+              <p>Inbox</p>
+              <p>Unread</p>
+              <p>Starred</p>
+              <p>Drafts</p>
+              <p>Sent</p>
+              <button id="more">
+                <i class="fa-solid fa-chevron-down"></i> More
+              </button>
+            </div>
+            <div class="items2">
+              <p>Archive</p>
+              <p>Spam</p>
+              <p>Deleted Items</p>
+              <button id="less">
+                <i class="fa-solid fa-angle-up"></i> Less
+              </button>
+            </div>
+            <br />
+            <div class="items3">
+              <div class="views">
+                <p>Views</p>
+                <p id="hide">Hide</p>
+              </div>
+              <div class="options">
+                <p><i class="fa-solid fa-image"></i> Photos</p>
+                <p><i class="fa-solid fa-file"></i> Documents</p>
+                <p><i class="fa-solid fa-envelopes-bulk"></i> Subscriptions</p>
+                <p><i class="fa-solid fa-plane-departure"></i> Travel</p>
+              </div>
+            </div>
+            <br>
+            <div class="items3">
+              <div class="views">
+                <p>Folders</p>
+                <p id="Folder_hide">Hide</p>
+              </div>
+              <div class="folder_options">
+                <p><i class="fa-solid fa-plus"></i> Photos</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="mid_part"></div>
+      </div>
+    </main>
+
+    <script src="/scripts/home.js"></script>
+  </body>
+</html>
