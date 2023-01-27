@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Yahoo Sans','Helvetica Neue',Helvetica,Arial
+}
+
+body{
+    background-color: #fff;
+}
+
+header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.right_nav p{
+    font-size: 0.8rem;
+    color: #628fff;
+    cursor: pointer;
+}
+
+.right_nav p:hover{
+    color: blue;
+}
+main{
+    padding: 6.5rem;
+    background-color: #f3f7f9;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    background-color: #fff;
+    text-align: center;
+    padding: 2rem;
+    width: 22.5rem;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 30%)
+}
+.container .content{
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
+}
+.container .content p{
+    font-size: 0.9rem;
+}
+.container .signin_input{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .signin_input input{
+    border: none;
+    outline: none;
+    margin: 1.5rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 0.1px solid #188fff;
+}
+.container .signin_input input::placeholder{
+    font-size: 1rem;
+}
+
+button{
+    border-radius: 2rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.container .input button{
+    background-color: #188fff;
+    color: #fff;   
+}
+.container .input button:hover{
+    background-color: #0473db;
+}
+.container .forget{
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #188fff;
+    margin-bottom: 5rem;
+    
+}
+.checkbox{
+    display: flex;  
+    cursor: pointer;
+}
+.check{
+    margin: 0 0.5rem;
+}
+.forgetPassword:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+.container .create button{
+    border: 1px solid #188fff;
+    background-color: transparent;
+    color: #188fff;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+.container .create button:hover{
+ color: #0473db;
+ border: 1px solid #0473db;
+}
+
+/* signup:-- css */
+
+.container .signup_input{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .signup_input input{
+    border: none;
+    outline: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 0.1px solid gray;
+}
+.container .signup_input input::placeholder{
+    font-size: 1rem;
+}
