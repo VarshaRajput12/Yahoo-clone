@@ -1,4 +1,3 @@
-
 // for side bar =================
 const less = document.querySelector("#less");
 const more = document.querySelector("#more");
@@ -8,24 +7,23 @@ const Folder_hide = document.querySelector("#Folder_hide");
 const options = document.querySelector(".options");
 const folder_options = document.querySelector(".folder_options");
 
-more.addEventListener("click", ()=>{
-    moreOptions.style.display = "block";
-    more.style.display = "none";
+more.addEventListener("click", () => {
+  moreOptions.style.display = "block";
+  more.style.display = "none";
 });
 
-less.addEventListener("click", ()=>{
-    moreOptions.style.display = "none";
-    more.style.display = "block";
-})
+less.addEventListener("click", () => {
+  moreOptions.style.display = "none";
+  more.style.display = "block";
+});
 
 hide.addEventListener("click", (e) => {
- options.classList.toggle("display");
- if(hide.innerHTML = "Hide"){
+  options.classList.toggle("display");
+  if ((hide.innerHTML = "Hide")) {
     hide.innerHTML = "Show";
- }else{
+  } else {
     hide.innerHTML = "Hide";
- }
-  
+  }
 });
 
 Folder_hide.addEventListener("click", (e) => {
