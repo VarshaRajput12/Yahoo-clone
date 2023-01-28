@@ -91,6 +91,7 @@ p .fa-angle-down {
 /*========================== main============================= */
 .maincontainer {
   display: flex;
+  justify-content: space-between ;
 }
 .left_side {
   background-color: #505baf;
@@ -153,7 +154,7 @@ p .fa-angle-down {
 .mails_area {
   background-color: #38407c;
   width: 84%;
-  margin: 5.5% 0 0 14%;
+  margin: 5.4% 3% 0 14%;
 }
 .head_mails {
   display: flex;
@@ -216,8 +217,98 @@ p .fa-angle-down {
 }
 
 
+
 /* dialogueBoxes */
 
+.compose_box{
+  color: gray;
+  background-color: #fff;
+  width: 84%;
+  height: 89vh;
+  padding: 2rem;
+  
+  /* margin: 5.4% 3% 0 1%; */
+}
+
+.to_from{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.cross{
+  float: right;
+  margin: 0 0 2rem -2rem;
+  cursor: pointer;
+}
+.cross:hover{
+color: #000;
+}
+.to{
+  font-size: 0.9rem;
+  border-bottom: 1px solid;
+}
+.to_from input{
+  width: 95%;
+  padding: 0.4rem 0;
+  border: none;
+  outline: none;
+
+}
+
+#Subject{
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+.to_from textarea{
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  height: 60vh;
+  overflow-y: scroll;
+  padding: 1rem;
+ 
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.compose_footer{
+  position: fixed;
+  bottom: 0;
+  width: 79%;
+  display: flex;
+  
+  align-items: center;
+  border-top: 1px solid gray;
+  padding: 1rem 0.5rem ;
+   color: rgb(35, 34, 34);
+}
+.compose_footer button{
+  background-color: #188fff;
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 0.6rem 2rem;
+  margin-right: 2rem;
+}
+.compose_footer button:hover{
+  background-color: #076ac7;
+}
+
+.compose_footer .icons i{
+  margin: 0 .6rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.compose_footer .icons i:hover{
+  background: #cde3f8;
+}
 .dialogueBox{
     background-color: #fff;
     color: #000;
