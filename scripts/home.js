@@ -19,7 +19,7 @@ less.addEventListener("click", () => {
 
 hide.addEventListener("click", (e) => {
   options.classList.toggle("display");
-  if ((hide.innerHTML = "Hide")) {
+  if ((hide.innerHTML == "Hide")) {
     hide.innerHTML = "Show";
   } else {
     hide.innerHTML = "Hide";
@@ -28,9 +28,21 @@ hide.addEventListener("click", (e) => {
 
 Folder_hide.addEventListener("click", (e) => {
   folder_options.classList.toggle("display");
-  if ((Folder_hide.innerHTML = "Hide")) {
+  if ((Folder_hide.innerHTML == "Hide")) {
     Folder_hide.innerHTML = "Show";
   } else {
     Folder_hide.innerHTML = "Hide";
   }
 });
+
+
+//mails section
+
+// const Delete = document.querySelectorAll(".Delete");
+// const mail_section = document.querySelectorAll(".mail_section");
+// console.log(mail_section);
+// mail_section.addEventListener("click", (e)=>{
+//     Delete.forEach((ele)=>{
+//         console.log(ele)
+//     })
+// })

@@ -24,6 +24,7 @@
       <nav class="right_nav"><p>Help</p></nav>
     </header>
     <main>
+      <form action="">
       <div class="container signup_container">
         <div class="main_head">
           <img src="/images/logo.png" alt="Yahoo" width="38%" />
@@ -34,16 +35,16 @@
         <div class="signup_input">
           <div class="fullname input">
             <i class="fa-regular fa-address-card"></i>
-            <input type="text" placeholder="Full name" />
+            <input type="text" placeholder="Full name" required/>
           </div>
           <div class="email input">
             <i class="fa-regular fa-envelope"></i>
             <!-- <span>@yahoo.com</span> -->
-            <input type="email" placeholder="New Yahoo email" />
+            <input type="email" placeholder="New Yahoo email" required id="email"/>
           </div>
           <div class="password input">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Create password" />
+            <input type="password" placeholder="Create password" required id="password"/>
           </div>
           <div class="birth input">
             <i class="fa-solid fa-cake-candles"></i>
@@ -57,12 +58,14 @@
         </p>
 
         <div class="continue">
-          <button type="button">Continue</button>
+          <button type="button" id="continue">Continue</button>
           <p class="haveAccount">
             Already have an account? <a href="/pages/signin.html">Sign in</a>
           </p>
         </div>
       </div>
+      </form>
     </main>
+    <script src="/scripts/signup.js"></script>
   </body>
 </html>

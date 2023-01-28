@@ -13,6 +13,10 @@ button {
 header {
   background-color: #7282fb;
   padding: 1rem 2rem;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .container {
   display: flex;
@@ -29,29 +33,39 @@ header {
   justify-content: center;
   align-items: center;
   width: 40rem;
+  margin-left: 2rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 .container .left_nav .search input {
   width: 100%;
   border: none;
   outline: none;
   font-size: 0.9rem;
-  padding: 1rem;
+  padding: 0 1rem;
   /* position: relative; */
 }
 .container .left_nav .search p {
   display: flex;
-  margin: 1rem;
+  padding: 1rem;
+  color: #188fff;
   /* background-color: #38407c; */
 }
-.fa-angle-down {
-  /* position: absolute; */
-  /* left: 53%; */
+
+p .fa-angle-down {
+  margin: 0 0.8rem;
 }
+
 .left_nav .search_icon {
-  width: rem;
-  height: 2rem;
-  /* padding: 2rem; */
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem 2rem;
   background-color: #9e97fc;
+}
+.left_nav .search_icon:hover {
+  background-color: #b6b2f3;
 }
 
 .right_nav {
@@ -81,9 +95,10 @@ header {
 .left_side {
   background-color: #505baf;
   width: 14rem;
-  height: 90.3vh;
-  padding: 1.5rem;
+  height: 100vh;
+  padding: 7rem 1.5rem;
   line-height: 1.8rem;
+  position: fixed;
 }
 .left_side .compose {
   width: 100%;
@@ -137,13 +152,15 @@ header {
 
 .mails_area {
   background-color: #38407c;
-  width: 100%;
+  width: 84%;
+  margin: 5.5% 0 0 14%;
 }
 .head_mails {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0 0.1rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  color: #d8d3e4;
 }
 
 .mid_mails span {
@@ -152,11 +169,15 @@ header {
 }
 
 .mails_right {
+  position: fixed;
+  right: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #38407c;
   padding: 1rem;
+  padding: 7rem 1rem;
   box-shadow: 0 0 0.1rem;
 }
 .mails_right .fa-gear {
@@ -170,4 +191,42 @@ header {
 .mails_right i:hover {
   color: #fff;
   cursor: pointer;
+}
+.mail_section {
+  color: #eaeaf1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 2rem;
+  border-bottom: 0.1px solid #626997;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.mail_section .mid {
+  width: 70%;
+}
+.mail_section:hover {
+  background-color: #434d99;
+}
+.mail_section .time .fa-trash-can {
+  color: rgb(239, 68, 68);
+}
+
+.Delete {
+  display: none;
+}
+
+
+/* dialogueBoxes */
+
+.dialogueBox{
+    background-color: #fff;
+    color: #000;
+    margin-left: 15rem;
+    display: none;
+}
+form{
+ /* margin-left: 6rem; */
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
 }

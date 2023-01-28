@@ -16,6 +16,7 @@
         <nav class="right_nav"><p>Help</p></nav>
     </header>
     <main>
+        <form action="">
         <div class="container">
             <div class="main_head">
                 <img src="/images/logo.png" alt="Yahoo" width="38%">
@@ -25,9 +26,9 @@
             <p>using your Yahoo account</p>
             </div>
             <div class="signin_input">
-                <input type="text" name="name" id="" placeholder="Username, email or mobile">
+                <input type="text" name="name" autocomplete="off" id="input" placeholder="Username, email or mobile">
                 <label for="name"></label>
-                <button type="button" class="next">Next</button>
+                <button type="button" class="next" id="next">Next</button>
             </div>
             <div class="forget">
                 
@@ -38,7 +39,8 @@
                 <button type="button"><a href="/pages/signup.htm">Create an account</a></button>
             </div>
         </div>
+        </form>
     </main>
-    
+    <script src="/scripts/signin.js"></script>
 </body>
 </html>
