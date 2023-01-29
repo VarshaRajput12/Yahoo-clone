@@ -58,6 +58,7 @@ const cross_compose = document.querySelector("#cross_compose");
 
 composebtn.addEventListener("click", () => {
   mails_area.style.display = "none";
+  sentMails.style.display = "none";
   compose_box.style.display = "block";
 });
 
@@ -75,7 +76,7 @@ async function emailSend(e) {
   const senderEmail = userEmail;
   const subject = document.querySelector("#Subject").value;
   const html = document.querySelector("#textarea").value;
-
+  compose_box.style.display = "none";
   try {
     const response = await fetch(
       "https://aircampushack.onrender.com/gmail/sendemail",
@@ -89,8 +90,8 @@ async function emailSend(e) {
     );
     const data = await response.json();
     console.log(data);
-    compose_box.style.display = "none";
-    console.log("email sent");
+    alert("Mail sent Successfully");
+    document.querySelector("#sentArea_").style.display = "block";
   } catch (err) {
     console.log("Error:", err);
   }
@@ -101,11 +102,14 @@ document.querySelector("#form2").addEventListener("submit", emailSend);
 
 const sentMails = document.querySelector(".sentMails");
 const inbox = document.querySelector(".inbox");
+const sentBtn = document.querySelector("#sent")
 
 inbox.addEventListener("click", () => {
   compose_box.style.display = "none";
   mails_area.style.display = "block";
   sentMails.style.display = "none";
+  inbox.classList.toggle("background");
+  sentBtn.classList.remove("background");
 });
 
 // const Deletebtn = document.querySelectorAll(".trash");
@@ -134,9 +138,9 @@ const allData = async (e) => {
   mails_area.style.display = "none";
   compose_box.style.display = "none";
   sentMails.style.display = "block";
-  // document.querySelector(".content").style.display = "none";
-  // document.querySelector("#listall").classList.add("active");
-  // inboxBtn.classList.remove("active");
+  sentBtn.classList.add("background");
+  inbox.classList.remove("background");
+
   let email = userEmail;
 
   try {
@@ -203,14 +207,10 @@ const allData = async (e) => {
       })
       .join("");
     document.querySelector("#sentArea_").innerHTML = emailTemplate;
-    //document.querySelector(".content2").innerHTML = emailTemplate;
-    //document.querySelector('#email-list').innerHTML = ;
-    console.log(emailTemplate);
-    console.log(data);
-    console.log("got list");
+    
   } catch (error) {
     console.log("Error:", error);
   }
 };
 
-document.querySelector("#sent").addEventListener("click", allData);
+sentBtn.addEventListener("click", allData);

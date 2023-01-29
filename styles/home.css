@@ -119,6 +119,7 @@ p .fa-angle-down {
   border-radius: 0.2rem;
 }
 .left_side p {
+  margin: 0.5rem 0;
   padding: 0 1rem;
   font-size: 0.8rem;
   cursor: pointer;
@@ -126,10 +127,8 @@ p .fa-angle-down {
 .left_side p:hover {
   background-color: #434d99;
 }
-.left_side p:active{
-   background-color: #434d99;
-}
-.items .inbox {
+
+.background {
   background-color: #356ddc;
   padding: 0 1rem;
   border-left: 2px solid #188fff;
@@ -397,10 +396,53 @@ color: #000;
   .left_side{
     overflow-y: scroll;
   }
+
+  .container .left_nav .search{
+    width: auto;
+  }
   .compose_box{
     margin-top:8%;
     width: 72%;
     margin-left: 22%;
+  }
+  
+}
+
+
+@media screen and (max-width: 975px){
+  .mails_area{
+    margin-top:8%;
+    width: 74%;
+    padding: 1rem;
+  }
+
+  .container .left_nav .search{
+    width: auto;
+  }
+  
+  .compose_box{
+    margin-top:8%;
+    width: 70%;
+    margin-left: 20%;
+  }
+  /* .right_nav{
+    display: none;
+  } */
+}
+
+@media screen and (max-width: 920px){
+  .mails_area{
+    margin-top:8%;
+    width: 72%;
+    padding: 1rem;
+  }
+
+  .container .left_nav .search{
+    width: auto;
+  }
+  .compose_box{
+    margin-top:8%;
+    width: 65%;
   }
   .right_nav{
     display: none;
