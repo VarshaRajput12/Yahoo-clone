@@ -32,8 +32,8 @@
           </div>
         </div>
         <div class="right_nav">
-          <p><img src="/images/user.png" alt="user" width="25%" /> Varsha</p>
-          <p><img src="/images/home.png" alt="user" width=30%" /> Home</p>
+          <p id="profile"><img src="/images/user.png" alt="user" width="50%"/> Varsha</p>
+          <p><img src="/images/home.png" alt="user" width=50%" /> Home</p>
         </div>
       </div>
     </header>
@@ -41,13 +41,13 @@
       <div class="maincontainer">
         <aside>
           <div class="left_side">
-            <button type="button" class="compose">Compose</button>
+            <button type="button" class="compose" id="compose">Compose</button>
             <div class="items">
               <p class="inbox">Inbox</p>
               <p>Unread</p>
               <p>Starred</p>
               <p>Drafts</p>
-              <p>Sent</p>
+              <p id="sent">Sent</p>
               <p id="more"><i class="fa-solid fa-chevron-down"></i> More</p>
             </div>
             <div class="items2">
@@ -81,7 +81,7 @@
             </div>
           </div>
         </aside>
-        <!-- <div class="mails_area">
+        <div class="mails_area">
           <div class="head_mails">
             <div class="mail_left">
               <input type="checkbox" class="ckeckbox" />
@@ -209,16 +209,27 @@
               </div>
             </div>
           </section>
-        </div> -->
+        </div>
 
-        <div class="compose_box mails_area">
-          <i class="fa-solid fa-xmark cross"></i>
+       
+
+        <div class="mails_right">
+          <i class="fa-solid fa-gear"></i>
+          <i class="fa-solid fa-address-card"></i>
+          <i class="fa-solid fa-calendar"></i>
+          <i class="fa-solid fa-file-lines"></i>
+          <i class="fa-solid fa-circle-question"></i>
+        </div>
+      </div>
+      <form action="" id="form2">
+ <div class="compose_box mails_area" id="compose_box">
+          <i class="fa-solid fa-xmark cross" id="cross_compose"></i>
           <div class="to_from">
            <div class="to">
              <label for="to">To</label>
-            <input type="text" name="to"> 
+            <input type="text" name="to" id="send_to" autocomplete="off"> 
            </div>         
-            <input type="text" name="" placeholder="Subject" id="Subject">
+            <input type="text" name="" placeholder="Subject" id="Subject" autocomplete="off">
             <!-- <br> -->
             <textarea></textarea>
           </div>
@@ -238,18 +249,26 @@
           </div>
 
         </div>
+        </form>
+      <!-- dialogueBoxes -->
 
-        <div class="mails_right">
-          <i class="fa-solid fa-gear"></i>
-          <i class="fa-solid fa-address-card"></i>
-          <i class="fa-solid fa-calendar"></i>
-          <i class="fa-solid fa-file-lines"></i>
-          <i class="fa-solid fa-circle-question"></i>
+
+      <div class="logout">
+        <div class="profile">
+          <img src="/images/user.png" alt="user" width="30%">
+          <div>
+          <span>Varsha Rajput</span>
+          <br>
+          <span>Account info</span>
         </div>
+        </div>
+        
+          <button><a href="../pages/signin.html">Sign out</a></button>
+        
       </div>
 
-      <!-- dialogueBoxes -->
-      <div class="dialogueBox">
+
+      <!-- <div class="dialogueBox">
         <form action="">
           <div class="search">
             <label for="email">Search in</label>
@@ -263,24 +282,24 @@
             <option value="Deleted Items"></option>
           </datalist>
           </div>
-          <!-- <br> -->
+          
           <div class="form">
             <label for="form">Form</label>
           <input type="text" name="form">
           </div>
-          <!-- <br> -->
           
-          <!-- <br> -->
+          
+          
           <div class="sub">
             <label for="form">Subject</label>
           <input type="text" name="form">
           </div>
-          <!-- <br> -->
+          
           <div class="key">
             <label for="form">Keyword</label>
           <input type="text" name="form">
           </div>
-          <!-- <br> -->
+          
           <div class="contain">
             <label for="form">Contains</label>
           <hr>
@@ -294,7 +313,7 @@
           
 
         </form>
-      </div>
+      </div> -->
     </main>
 
     <script src="/scripts/home.js"></script>

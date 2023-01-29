@@ -16,7 +16,7 @@ document.querySelector("#next").addEventListener("click", signin);
 async function signin(e){
     e.preventDefault();
      const email = document.querySelector("#input").value;
-     const signinpass = document.querySelector("#signinpass").value;
+     const pass = document.querySelector("#signinpass").value;
      try{
         const response = await fetch("https://aircampushack.onrender.com/gmail/login",{
             method: "POST",
@@ -25,13 +25,16 @@ async function signin(e){
             },
             body:JSON.stringify({
                 email,
-                signinpass
+                pass
             })
         });
         const data = await response.json();
         console.log(data)
-        if(data.user !== "undefined"){
-            window.location.href = "/pages/home.html"
+        if(data.user !== undefined){
+            window.location.href = "../pages/home.html?email=" + email;
+        }else{
+            console.log("Error:", data.message);
+            window.location.href = "../pages/signup.html";
         }
      }catch(err){
         console.log("Error", err)
