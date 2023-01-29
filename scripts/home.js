@@ -51,17 +51,6 @@ window.addEventListener("click", (e) => {
   }
 });
 
-//mails section
-
-// const Delete = document.querySelectorAll(".Delete");
-// const mail_section = document.querySelectorAll(".mail_section");
-// console.log(mail_section);
-// mail_section.addEventListener("click", (e)=>{
-//     Delete.forEach((ele)=>{
-//         console.log(ele)
-//     })
-// })
-
 const mails_area = document.querySelector(".mails_area");
 const compose_box = document.querySelector(".compose_box");
 const composebtn = document.querySelector("#compose");
@@ -82,7 +71,7 @@ const userEmail = new URL(window.location.href).searchParams.get("email");
 
 async function emailSend(e) {
   e.preventDefault();
-  const  email = document.querySelector("#send_to").value;
+  const email = document.querySelector("#send_to").value;
   const senderEmail = userEmail;
   const subject = document.querySelector("#Subject").value;
   const html = document.querySelector("#textarea").value;
@@ -95,7 +84,7 @@ async function emailSend(e) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({email, senderEmail, subject, html }),
+        body: JSON.stringify({ email, senderEmail, subject, html }),
       }
     );
     const data = await response.json();
@@ -108,42 +97,8 @@ async function emailSend(e) {
 
 document.querySelector("#form2").addEventListener("submit", emailSend);
 
-// async function allData(e) {
-//   e.preventDefault();
-
-//   const email = userEmail;
-//   try {
-//     const response = await fetch(
-//       "https://aircampushack.onrender.com/gmail/listall",
-//       {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({ email }),
-//       }
-//       );
-//       const data = await response.json();
-//       // const output = JSON.parse(data.emailData)
-//    const output = data.emailData[0].emailData;
-//    const output2 = JSON.parse(output)
-//     console.log(output2[0])
-//     console.log(output2[0].subject)
-//     console.log(output2[0].email)
-
-//   } catch (err) {
-//     console.log("Error:", err);
-//   }
-// }
-// document.querySelector("#sent").addEventListener("click", allData);
-
 const sentMails = document.querySelector(".sentMails");
 const inbox = document.querySelector(".inbox");
-// document.querySelector("#sent").addEventListener("click", () => {
-  // mails_area.style.display = "none";
-  // compose_box.style.display = "none";
-  // sentMails.style.display = "block";
-// });
 
 inbox.addEventListener("click", () => {
   compose_box.style.display = "none";
