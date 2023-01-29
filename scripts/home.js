@@ -89,10 +89,12 @@ async function emailSend(e) {
     );
     const data = await response.json();
     console.log(data);
+    compose_box.style.display = "none";
     console.log("email sent");
   } catch (err) {
     console.log("Error:", err);
   }
+
 }
 
 document.querySelector("#form2").addEventListener("submit", emailSend);
