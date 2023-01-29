@@ -239,11 +239,9 @@ const allData = async (e) => {
                 </div>
                 <div class="time">
                   <i class="fa-solid fa-trash-can display"></i>
-                  <span class="date">${currentHour} : ${currentMinute}</span>
+                  <span class="date">${currentHour} : ${currentMinute} : ${ampm}</span>
                 </div>
               </div>
-
-    
   `;
       })
       .join("");
