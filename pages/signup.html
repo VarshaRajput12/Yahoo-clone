@@ -25,48 +25,57 @@
     </header>
     <main>
       <form action="">
-      <div class="container signup_container">
-        <div class="main_head">
-          <img src="/images/logo.png" alt="Yahoo" width="38%" />
-        </div>
-        <div class="content">
-          <h3>Create a Yahoo account</h3>
-        </div>
-        <div class="signup_input">
-          <div class="fullname input">
-            <i class="fa-regular fa-address-card"></i>
-            <input type="text" placeholder="Full name" required/>
+        <div class="container signup_container">
+          <div class="main_head">
+            <img src="/images/logo.png" alt="Yahoo" width="38%" />
           </div>
-          <div class="email input">
-            <i class="fa-regular fa-envelope"></i>
-            <!-- <span>@yahoo.com</span> -->
-            <input type="email" placeholder="New Yahoo email" required id="email"/>
+          <div class="content">
+            <h3>Create a Yahoo account</h3>
           </div>
-          <div class="password input">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Create password" required id="password"/>
+          <div class="signup_input">
+            <div class="fullname input">
+              <i class="fa-regular fa-address-card"></i>
+              <input type="text" placeholder="Full name" required id="name" />
+            </div>
+            <div class="email input">
+              <i class="fa-regular fa-envelope"></i>
+              <!-- <span>@yahoo.com</span> -->
+              <input
+                type="email"
+                placeholder="New Yahoo email"
+                required
+                id="email"
+              />
+            </div>
+            <div class="password input">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                placeholder="Create password"
+                required
+                id="password"
+              />
+            </div>
+            <div class="birth input">
+              <i class="fa-solid fa-cake-candles"></i>
+              <input type="date" />
+            </div>
           </div>
-          <div class="birth input">
-            <i class="fa-solid fa-cake-candles"></i>
-            <input type="date"/>
-          </div>
-        </div>
 
-        <p>
-          By clicking "Continue", you agree to the <a href="">Terms</a> and
-          acknowledge the <a href="">Privacy Policy</a>
-        </p>
-
-        <div class="continue">
-          <button type="button" id="continue">Continue</button>
-          <p class="haveAccount">
-            Already have an account? <a href="../index.html">Sign in</a>
+          <p>
+            By clicking "Continue", you agree to the <a href="">Terms</a> and
+            acknowledge the <a href="">Privacy Policy</a>
           </p>
+
+          <div class="continue">
+            <button type="button" id="continue">Continue</button>
+            <p class="haveAccount">
+              Already have an account? <a href="../index.html">Sign in</a>
+            </p>
+          </div>
         </div>
-      </div>
       </form>
     </main>
     <script src="/scripts/signup.js"></script>
   </body>
 </html>
-

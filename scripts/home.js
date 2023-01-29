@@ -37,16 +37,19 @@ Folder_hide.addEventListener("click", (e) => {
   }
 });
 
-profile.addEventListener("mouseover", ()=>{
- logoutBox.style.display = "block";
-})
-
-window.addEventListener("click", (e) => {
-  if ( e.target !== logoutBox) {
+profile.addEventListener("mouseover", () => {
+  if (logoutBox.style.display == "none") {
+    logoutBox.style.display = "block";
+  } else {
     logoutBox.style.display = "none";
   }
 });
 
+window.addEventListener("click", (e) => {
+  if (e.target !== logoutBox) {
+    logoutBox.style.display = "none";
+  }
+});
 
 //mails section
 
@@ -79,10 +82,10 @@ const userEmail = new URL(window.location.href).searchParams.get("email");
 
 async function emailSend(e) {
   e.preventDefault();
-  const send_to = document.querySelector("#send_to").value;
-  const emailFrom = userEmail;
-  const subject = document.querySelector("#Subject");
-  const html = document.querySelector("html");
+  const senderEmail = document.querySelector("#send_to").value;
+  const email = userEmail;
+  const subject = document.querySelector("#Subject").value;
+  const html = document.querySelector("#textarea").value;
 
   try {
     const response = await fetch(
@@ -92,7 +95,7 @@ async function emailSend(e) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ send_to, emailFrom, subject, html }),
+        body: JSON.stringify({ senderEmail, email, subject, html }),
       }
     );
     const data = await response.json();
@@ -104,8 +107,6 @@ async function emailSend(e) {
 }
 
 document.querySelector("#form2").addEventListener("submit", emailSend);
-
-
 
 async function allData(e) {
   e.preventDefault();
@@ -128,14 +129,43 @@ async function allData(e) {
     console.log("Error:", err);
   }
 }
-document.querySelector("#send").addEventListener("click", allData);
+document.querySelector("#sent").addEventListener("click", allData);
 
 
+const sentMails = document.querySelector(".sentMails");
+const inbox = document.querySelector(".inbox");
+document.querySelector("#sent").addEventListener("click", ()=>{
+  mails_area.style.display = "none";
+  compose_box.style.display = "none";
+  sentMails.style.display = "block"
+});
 
-// sent posts
+inbox.addEventListener("click",()=>{
+  compose_box.style.display = "none";
+  mails_area.style.display = "block";
+  sentMails.style.display = "none";
+})
 
-// const sent = document.querySelector("#sent");
+// const Deletebtn = document.querySelectorAll(".trash");
+// const date = document.querySelectorAll(".date");
+// const mail_section = document.querySelectorAll(".mail_section");
 
-// sent.addEventListener("click", ()=>{
 
+// mail_section.forEach((section)=>{
+//   section.addEventListener("mouseover", ()=>{
+//     date.forEach((ele) => {
+//       ele.classList.toggle("display");
+//     });
+//   })
 // })
+
+// mail_section.forEach((section) => {
+//   section.addEventListener("mouseover", () => {
+//     Deletebtn.forEach((ele2) => {
+//       ele2.classList.toggle("display");
+//     });
+//   });
+// });
+
+
+

@@ -126,6 +126,9 @@ p .fa-angle-down {
 .left_side p:hover {
   background-color: #434d99;
 }
+.left_side p:active{
+   background-color: #434d99;
+}
 .items .inbox {
   background-color: #356ddc;
   padding: 0 1rem;
@@ -217,13 +220,15 @@ p .fa-angle-down {
 .mail_section:hover {
   background-color: #434d99;
 }
+
 .mail_section .time .fa-trash-can {
   color: rgb(239, 68, 68);
 }
 
-.Delete {
+.display{
   display: none;
 }
+
 
 
 
@@ -378,6 +383,10 @@ color: #000;
 .logout button:hover{
   background-color: #b0b0e8;
 }
+.sentMails{
+  display: none;
+}
+
 
 @media screen and (max-width: 1140px){
   .mails_area{

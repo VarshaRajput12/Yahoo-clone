@@ -17,6 +17,10 @@ async function signin(e){
     e.preventDefault();
      const email = document.querySelector("#input").value;
      const pass = document.querySelector("#signinpass").value;
+     if(email === "" || pass ===""){
+        alert("fill the empty fields")
+        return;
+     }
      try{
         const response = await fetch("https://aircampushack.onrender.com/gmail/login",{
             method: "POST",
@@ -34,9 +38,11 @@ async function signin(e){
             window.location.href = "../pages/home.html?email=" + email;
         }else{
             console.log("Error:", data.message);
-            window.location.href = "../pages/signup.html";
+            alert("user doesn't exist");
+            // window.location.href = "../pages/signup.html";
         }
      }catch(err){
+        
         console.log("Error", err)
      }
 }
