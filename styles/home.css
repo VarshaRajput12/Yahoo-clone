@@ -402,4 +402,7 @@ color: #000;
     width: 72%;
     margin-left: 22%;
   }
+  .right_nav{
+    display: none;
+  }
 }
