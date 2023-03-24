@@ -72,10 +72,10 @@ const userEmail = new URL(window.location.href).searchParams.get("email");
 
 async function emailSend(e) {
   e.preventDefault();
-  const email = document.querySelector("#send_to").value;
-  const senderEmail = userEmail;
-  const subject = document.querySelector("#Subject").value;
-  const html = document.querySelector("#textarea").value;
+  let email = document.querySelector("#send_to").value;
+  let senderEmail = userEmail;
+  let subject = document.querySelector("#Subject").value;
+  let html = document.querySelector("#textarea").value;
   compose_box.style.display = "none";
   try {
     const response = await fetch(
@@ -90,11 +90,14 @@ async function emailSend(e) {
     );
     const data = await response.json();
     console.log(data);
-    alert("Mail sent Successfully");
+    // alert("Mail sent Successfully");
     document.querySelector("#sentArea_").style.display = "block";
   } catch (err) {
     console.log("Error:", err);
   }
+  email = "";
+  subject = "";
+  html = "";
 
 }
 
